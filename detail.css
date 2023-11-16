@@ -23,7 +23,7 @@
     /* background-size: 350px; */
     /* background-repeat: no-repeat; */
     /* height: 350px; */
-    
+
 }
 
 .details .left-section {
@@ -71,7 +71,7 @@
 .card-body {
 
     padding-left: 15px;
-    
+
 }
 
 .title a {
@@ -83,7 +83,7 @@
     margin-bottom: 10px;
 }
 
-.sub-topics{
+.sub-topics {
 
     border-radius: 5px;
     box-shadow: var(--box-shadow);
@@ -95,7 +95,8 @@
 
 }
 
-.sub-topics-title, .topic{
+.sub-topics-title,
+.topic {
     margin-bottom: 0;
     margin-top: 0;
     padding: 10px;
@@ -103,12 +104,13 @@
     box-shadow: var(--box-shadow);
 }
 
-.topic{
+.topic {
     display: flex;
     align-items: center;
     cursor: pointer;
 
 }
+
 .topic ion-icon {
 
     margin-left: 0px;
@@ -126,24 +128,25 @@
 
 }
 
-.card-body .title{
+.card-body .title {
     margin-bottom: 0;
     margin-top: 5px;
 }
 
-.add-to-favorites{
+.add-to-favorites {
     margin: 10px 15px 15px 0;
     box-shadow: var(--box-shadow);
     padding: 5px 10px;
     border: 0.5px gray;
 }
 
-.add-to-favorites h5{
+.add-to-favorites h5 {
     font-weight: 400;
     margin-bottom: 5px;
     margin-top: 10px;
 }
-.add-to-favorites button{
+
+.add-to-favorites button {
     background-color: var(--brand-secondary);
     padding: 12px;
     color: white;
@@ -157,15 +160,54 @@
     cursor: pointer;
 }
 
-.add-to-favorites button ion-icon{
+.add-to-favorites button ion-icon {
     margin-left: 5px;
     font-size: 22px;
 }
 
-.credits{
+.credits {
     margin-left: 25%;
     margin-top: 5px;
     color: #a8a8be;
     font-size: 12px;
     font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+
+    .details {
+        flex-direction: column;
+        align-items: center;
+        background-image: linear-gradient(to bottom, var(--body-text) 0%, var(--body-text) 75%, transparent 75%, transparent 100%);
+    }
+
+    .details .left-section {
+        width: 100%;
+
+    }
+
+    .right-section {
+        order: -1;
+    }
+}
+
+
+@media screen and (max-width: 573px) {
+
+    .sub-topics-title,
+    .topic {
+
+        font-size: smaller;
+    }
+
+    .details .right-section {
+        width: 220px;
+    }
+    .add-to-favorites button {
+        font-size: 14px;
+    }
+
+    .add-to-favorites button ion-icon {
+        font-size: 18px;
+    }
 }
