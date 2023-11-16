@@ -178,7 +178,7 @@
     .details {
         flex-direction: column;
         align-items: center;
-        background-image: linear-gradient(to bottom, var(--body-text) 0%, var(--body-text) 75%, transparent 75%, transparent 100%);
+        background-image: linear-gradient(to bottom, var(--body-text) 0%, var(--body-text) 68%, transparent 68%, transparent 100%);
     }
 
     .details .left-section {
@@ -203,11 +203,26 @@
     .details .right-section {
         width: 220px;
     }
+
     .add-to-favorites button {
         font-size: 14px;
     }
 
     .add-to-favorites button ion-icon {
         font-size: 18px;
+    }
+
+    .details .left-section .title {
+
+        font-size: 20px;
+    }
+
+    .details .left-section .about .description {
+        font-size: 14px;
+    }
+
+
+    .sub-topics {
+        margin-top: 20px;
     }
 }
