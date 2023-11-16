@@ -169,11 +169,15 @@ input:focus {
     height: 300px;
     width: 250px;
     margin-bottom: 25px;
-    cursor: pointer;
+    /* cursor: pointer; */
     border-radius: var(--radius);
     box-shadow: var(--box-shadow);
 }
 
+.card a{
+    text-decoration: none;
+    color: var(--body-text);
+}
 
 .items .card .card-body {
     padding-left: 10px;
@@ -242,3 +246,51 @@ input:focus {
     margin-left: 5px;
     margin-right: 7px;
 }
+
+@media screen and (max-width: 768px) {
+    .brand h3, .brand p{
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 573px) {
+
+    .items{
+        justify-content: center;
+    }
+
+    .brand{
+        padding-left: 20%;
+    }
+    .brand h3, .brand p{
+        font-size: 14px;
+    }
+
+    .header .logo{
+        font-size: 14px;
+    }
+
+    .header .header-control button {
+        font-size: smaller;
+    }
+
+    .items-number{
+        font-size: 16px;
+    }
+
+    .search{
+        width: 50%;
+    }
+    .sort, .filter{
+        width: 25%;
+    }
+    select{
+        font-size: 12px;
+    }
+
+    .search-input {
+        font-size: 11px;
+    }
+}
+
