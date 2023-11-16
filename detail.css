@@ -1,0 +1,171 @@
+:root {
+
+    --left-right-padding: 5%;
+    --box-shadow: 0 0 2px rgb(182, 181, 181);
+    --radius: 5px;
+    --brand-primary: #0768AC;
+    --brand-secondary: #03c180;
+    --bg_default: #FFFFFF;
+    --bg_body: #F0F9FF;
+    --lines-color: #DDDDDD;
+    --body-text: #333333;
+    --heart-color: #DC143C;
+}
+
+
+.details {
+    display: flex;
+    justify-content: center;
+    padding-left: 13%;
+    padding-right: 10%;
+    color: white;
+    background-image: linear-gradient(to bottom, var(--body-text) 0%, var(--body-text) 45%, transparent 45%, transparent 100%);
+    /* background-size: 350px; */
+    /* background-repeat: no-repeat; */
+    /* height: 350px; */
+    
+}
+
+.details .left-section {
+
+    width: 45%;
+    padding-right: 10px;
+
+}
+
+.details .right-section {
+    width: 270px;
+    background-color: var(--bg_default);
+    margin-top: 30px;
+    color: var(--body-text);
+    height: max-content;
+
+}
+
+.details .left-section .type {
+
+    color: var(--brand-secondary);
+    margin-bottom: 0;
+    font-weight: 400;
+    margin-top: 30px;
+
+
+}
+
+.details .left-section .title {
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.details .left-section .rating {
+
+    margin-bottom: 10px;
+}
+
+.details .left-section .about {
+
+    margin-bottom: 15px;
+}
+
+.card-body {
+
+    padding-left: 15px;
+    
+}
+
+.title a {
+    font-weight: 400;
+}
+
+.details .left-section .about .description {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.sub-topics{
+
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    /* border: 0.1px solid rgb(187, 186, 186); */
+    margin-top: 75px;
+    /* padding: 10px; */
+    background-color: var(--bg_default);
+    color: var(--body-text);
+
+}
+
+.sub-topics-title, .topic{
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 10px;
+    padding-left: 24px;
+    box-shadow: var(--box-shadow);
+}
+
+.topic{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+.topic ion-icon {
+
+    margin-left: 0px;
+    margin-right: 8px;
+    color: var(--brand-secondary);
+    font-size: 20px;
+    /* background-color: #DC143C; */
+    /* font-size: 12px; */
+}
+
+.details .right-section img {
+
+    /* height: 100%; */
+    width: 100%;
+
+}
+
+.card-body .title{
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.add-to-favorites{
+    margin: 10px 15px 15px 0;
+    box-shadow: var(--box-shadow);
+    padding: 5px 10px;
+    border: 0.5px gray;
+}
+
+.add-to-favorites h5{
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.add-to-favorites button{
+    background-color: var(--brand-secondary);
+    padding: 12px;
+    color: white;
+    border: 0;
+    font-size: larger;
+    font-weight: light;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add-to-favorites button ion-icon{
+    margin-left: 5px;
+    font-size: 22px;
+}
+
+.credits{
+    margin-left: 25%;
+    margin-top: 5px;
+    color: #a8a8be;
+    font-size: 12px;
+    font-weight: 700;
+}
