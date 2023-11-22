@@ -13,22 +13,23 @@
 }
 
 
+
 .details {
     display: flex;
     justify-content: center;
-    padding-left: 13%;
-    padding-right: 10%;
+   
+   
     color: white;
-    background-image: linear-gradient(to bottom, var(--body-text) 0%, var(--body-text) 45%, transparent 45%, transparent 100%);
-    /* background-size: 350px; */
-    /* background-repeat: no-repeat; */
-    /* height: 350px; */
+    background-image: linear-gradient(to bottom, var(--body-text) 0%, var(--body-text) 47%, transparent 45%, transparent 100%);
+   
+   
+   
 
 }
 
 .details .left-section {
 
-    width: 45%;
+    width: 40%;
     padding-right: 10px;
 
 }
@@ -37,6 +38,7 @@
     width: 270px;
     background-color: var(--bg_default);
     margin-top: 30px;
+    margin-left: 10px;
     color: var(--body-text);
     height: max-content;
 
@@ -53,7 +55,7 @@
 }
 
 .details .left-section .title {
-    font-weight: 400;
+    font-weight: 700;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -87,9 +89,9 @@
 
     border-radius: 5px;
     box-shadow: var(--box-shadow);
-    /* border: 0.1px solid rgb(187, 186, 186); */
-    margin-top: 75px;
-    /* padding: 10px; */
+   
+    margin-top: 55px;
+   
     background-color: var(--bg_default);
     color: var(--body-text);
 
@@ -117,14 +119,15 @@
     margin-right: 8px;
     color: var(--brand-secondary);
     font-size: 20px;
-    /* background-color: #DC143C; */
-    /* font-size: 12px; */
+   
+   
 }
 
 .details .right-section img {
 
-    /* height: 100%; */
+    object-fit: cover;
     width: 100%;
+    height: 155px;
 
 }
 
@@ -135,24 +138,24 @@
 
 .add-to-favorites {
     margin: 10px 15px 15px 0;
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 0 4px -1px rgb(182, 181, 181);
     padding: 5px 10px;
     border: 0.5px gray;
 }
 
 .add-to-favorites h5 {
-    font-weight: 400;
+    font-weight: 700;
     margin-bottom: 5px;
     margin-top: 10px;
 }
 
 .add-to-favorites button {
     background-color: var(--brand-secondary);
-    padding: 12px;
+    padding: 15px;
     color: white;
     border: 0;
-    font-size: larger;
-    font-weight: light;
+    font-size: 16px;
+    /* font-weight: light; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -173,6 +176,16 @@
     font-weight: 700;
 }
 
+@media screen and (min-width: 1440px) {
+
+    .details {
+        width: 1440px;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     .details {
@@ -186,6 +199,10 @@
 
     }
 
+    .about, .sub-topics{
+        width: 90%;
+        margin-left: 5%;
+    }
     .right-section {
         order: -1;
     }
@@ -198,10 +215,6 @@
     .topic {
 
         font-size: smaller;
-    }
-
-    .details .right-section {
-        width: 220px;
     }
 
     .add-to-favorites button {

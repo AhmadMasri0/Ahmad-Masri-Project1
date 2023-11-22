@@ -1,10 +1,10 @@
 :root {
 
     --left-right-padding: 5%;
-    --box-shadow: 0 0 2px rgb(182, 181, 181);
-    --radius: 5px;
+    --box-shadow: 0 0 6px -1px rgb(182, 181, 181);
+    --radius: 10px;
     --brand-primary: #0768AC;
-    --brand-secondary: #03c180;
+    --brand-secondary: #03C180;
     --bg_default: #FFFFFF;
     --bg_body: #F0F9FF;
     --lines-color: #DDDDDD;
@@ -20,7 +20,7 @@ body {
 
 .header {
     display: flex;
-    /* margin: auto; */
+
     justify-content: space-between;
     padding: 10px var(--left-right-padding);
     background-color: var(--bg_default);
@@ -36,13 +36,17 @@ body {
     width: 200px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.header .header-control>button {
+    margin-right: 5px;
 }
 
 .header .header-control button {
     background-color: transparent;
     height: 40%;
-    border-radius: var(--radius);
+    border-radius: 5px;
     cursor: pointer;
     border: 0;
     box-shadow: var(--box-shadow);
@@ -56,11 +60,11 @@ body {
 }
 
 .controls {
-    /* border: 0.5px solid; */
+
     box-shadow: var(--box-shadow);
     margin: 20px var(--left-right-padding) 10px;
-    height: 50px;
-    border-radius: var(--radius);
+
+    border-radius: 10px;
     background-color: var(--bg_default);
     display: flex;
     justify-content: flex-start;
@@ -86,6 +90,7 @@ select {
     border: 0;
     border-radius: var(--radius);
     padding-left: 0;
+    font-size: 14px;
 
 }
 
@@ -96,11 +101,9 @@ input:focus {
 .search {
     display: flex;
     align-items: center;
-    /* padding-left: 5px; */
     width: 74%;
-    height: 100%;
     border-right: 1px solid rgb(182, 181, 181);
-    /* border: 1px solid; */
+
 }
 
 .search-outline {
@@ -112,10 +115,11 @@ input:focus {
     border: 0;
     height: 90%;
     width: 100%;
+    font-size: 16px;
 }
 
 .input:focus {
-    /* border: 0; */
+
     outline: none;
 }
 
@@ -128,7 +132,10 @@ input:focus {
 .brand {
     padding-top: 10px;
     padding-bottom: 5px;
-    padding-left: 37%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
     background: linear-gradient(to bottom right, var(--brand-primary) 49%, transparent 50%),
         linear-gradient(to bottom left, var(--brand-secondary) 49%, transparent 50%);
     background-size: 100% 50%;
@@ -136,17 +143,22 @@ input:focus {
     background-repeat: no-repeat;
 }
 
+.brand .center-text {
+    text-align: left;
+}
+
 .brand h3 {
-    margin-top: 50px;
+    margin-top: 40px;
     margin-bottom: 0;
     color: var(--brand-secondary);
     font-weight: bold;
+    font-size: 22px;
 }
 
 .brand p {
     margin-top: 0;
     color: var(--body-text);
-    font-weight: lighter;
+    font-weight: 400;
 }
 
 .items-number {
@@ -158,23 +170,24 @@ input:focus {
     margin-right: var(--left-right-padding);
 
     display: flex;
-    /* grid-template-columns: repeat(auto-fill, minmax(auto, 1px)); */
+    align-items: stretch;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .items .card {
     background-color: var(--bg_default);
-    position: relative;
-    height: 300px;
-    width: 250px;
+
+
+
+    width: 230px;
     margin-bottom: 25px;
-    /* cursor: pointer; */
+
     border-radius: var(--radius);
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 0 3px -1px rgb(182, 181, 181);
 }
 
-.card a{
+.card a {
     text-decoration: none;
     color: var(--body-text);
 }
@@ -191,7 +204,7 @@ input:focus {
 
 .rating ion-icon {
     font-size: 15px;
-    color: #ddd;
+    color: rgb(225, 147, 3);
     float: right;
 }
 
@@ -204,32 +217,32 @@ input:focus {
 .items .card .card-body .title {
     font-weight: 700;
     margin-top: 0;
+    font-size: 15px;
     margin-bottom: 23px;
 }
 
-.items .card .card-body .author{
+.items .card .card-body .author {
 
-    color: var(--body-text);
+    color: #686767;
     font-weight: 400;
+    font-size: 12px;
     margin-top: 10px;
 }
 
 .items .card .card-body .type {
-    font-weight: lighter;
+    font-weight: 400;
+    font-size: 13px;
     margin-bottom: 0;
 }
 
-.items .card .img {
-    height: 50%;
-}
-
 .items .card .img img {
-    /* object-fit: contain; */
+
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
-    position: absolute;
+    object-fit: cover;
     width: 100%;
-    height: 50%;
+    height: 145px;
+
 }
 
 .footer {
@@ -247,53 +260,106 @@ input:focus {
     margin-right: 7px;
 }
 
-@media screen and (max-width: 768px) {
-    .brand h3, .brand p{
-        font-size: 16px;
+@media screen and (min-width: 1440px) {
+
+    .header,
+    .brand {
+        max-width: 1440px;
+
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
     }
 
+    .controls,
+    .items,
+    .items-number {
+        box-sizing: border-box;
+        width: 1284px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
+
+
 
 @media screen and (max-width: 573px) {
 
-    .items{
-        justify-content: center;
+    .button-text {
+        display: none;
     }
 
-    .brand{
-        padding-left: 20%;
-    }
-    .brand h3, .brand p{
-        font-size: 14px;
+    .header .header-control {
+        width: auto;
     }
 
-    .header .logo{
-        font-size: 14px;
+    .controls {
+        flex-wrap: wrap;
     }
+
+    .items {
+        justify-content: space-around;
+    }
+
+    .brand {
+        padding-left: 5%;
+
+    }
+
+
+
+    .brand h3 {
+        margin-top: 60px;
+    }
+
+
 
     .header .header-control button {
         font-size: smaller;
+        --box-shadow: 0 0 1px 0.5px rgb(182, 181, 181);
     }
 
-    .items-number{
-        font-size: 16px;
+
+
+    .search {
+        width: 100%;
+        height: 53px;
+        border-right: 0;
+        border-bottom: 1px solid rgb(182, 181, 181);
     }
 
-    .search{
-        width: 50%;
+    .sort,
+    .filter {
+        width: 45%;
+
     }
-    .sort, .filter{
-        width: 25%;
-    }
-    select{
-        font-size: 12px;
-    }
+
+
 
     .search-input {
-        font-size: 11px;
+        border-top-right-radius: 10px;
+
     }
 
     .footer {
         font-size: 12px;
+    }
 }
 
+@media screen and (max-width: 512px) {
+    .items .card {
+        width: 100%;
+    }
+
+    .brand {
+        background: linear-gradient(to bottom right, var(--brand-primary) 49%, transparent 50%),
+            linear-gradient(to bottom left, var(--brand-secondary) 49%, transparent 50%);
+        background-size: 100% 20%;
+        background-color: var(--bg_default);
+        background-repeat: no-repeat;
+    }
+
+    .brand h3 {
+        margin-top: 27px;
+    }
+}
