@@ -333,7 +333,6 @@ input:focus {
 
     .header .header-control button {
         font-size: smaller;
-        --box-shadow: 0 0 1px 0.5px rgb(182, 181, 181);
     }
 
     .search {
