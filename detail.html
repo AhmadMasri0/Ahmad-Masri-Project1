@@ -16,20 +16,20 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header flex-container">
         <h3 class="logo">
             Web Topics
         </h3>
 
-        <div class="header-control">
-            <button>
+        <div class="header-control flex-container">
+            <button class="flex-container" onclick="toggleTheme()">
                 <ion-icon name="moon-outline"></ion-icon>
                 <span class="button-text">
 
                     Dark Mode
                 </span>
             </button>
-            <button>
+            <button class="flex-container" onclick="favorites()">
                 <ion-icon name="heart-outline"></ion-icon>
                 <span class="button-text">
                     Favourites
@@ -39,8 +39,7 @@
         </div>
     </header>
 
-
-    <div class="brand">
+    <div class="brand flex-container">
         <div class="center-text">
             <h3>Welcome to our website!</h3>
             <p>We have a new design that's fresh, modern, and easy to use.</p>
@@ -108,9 +107,9 @@
         <div class="right-section">
 
 
-            <div class="img">
+            <!-- <div class="img"> -->
                 <img src="Logos/javascript.jpg" alt="html">
-            </div>
+            <!-- </div> -->
 
             <div class="card-body">
 
@@ -137,10 +136,12 @@
 
     </div>
 
-
-    <footer class="footer">
+    <footer class="footer container flex-container">
         Developed with <ion-icon class="heart-icon" name="heart"></ion-icon> &copy; 2023
     </footer>
+
+    <script src="index.js"></script>
+
 </body>
 
 </html>

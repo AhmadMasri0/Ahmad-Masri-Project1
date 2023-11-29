@@ -1,29 +1,8 @@
-:root {
-
-    --left-right-padding: 5%;
-    --box-shadow: 0 0 2px rgb(182, 181, 181);
-    --radius: 5px;
-    --brand-primary: #0768AC;
-    --brand-secondary: #03c180;
-    --bg_default: #FFFFFF;
-    --bg_body: #F0F9FF;
-    --lines-color: #DDDDDD;
-    --body-text: #333333;
-    --heart-color: #DC143C;
-}
-
-
-
 .details {
     display: flex;
     justify-content: center;
-   
-   
     color: white;
-    background-image: linear-gradient(to bottom, var(--body-text) 0%, var(--body-text) 47%, transparent 45%, transparent 100%);
-   
-   
-   
+    background-image: linear-gradient(to bottom, #333333 0%, #333333 47%, transparent 45%, transparent 100%);
 
 }
 
@@ -36,7 +15,7 @@
 
 .details .right-section {
     width: 270px;
-    background-color: var(--bg_default);
+    background-color: transparent;
     margin-top: 30px;
     margin-left: 10px;
     color: var(--body-text);
@@ -70,9 +49,18 @@
     margin-bottom: 15px;
 }
 
+.card-body .title{
+    color: #000;
+}
+
 .card-body {
 
     padding-left: 15px;
+    padding-right: 0;
+    padding-bottom: 1px;
+    margin-top: -11px;
+    padding-top: 22px;
+    background-color: white;
 
 }
 
@@ -88,13 +76,20 @@
 .sub-topics {
 
     border-radius: 5px;
-    box-shadow: var(--box-shadow);
-   
     margin-top: 55px;
-   
     background-color: var(--bg_default);
     color: var(--body-text);
 
+}
+
+.sub-topics-title{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.sub-topics .topic:last-child{
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .sub-topics-title,
@@ -103,7 +98,8 @@
     margin-top: 0;
     padding: 10px;
     padding-left: 24px;
-    box-shadow: var(--box-shadow);
+    
+    border: 0.5px solid var(--lines-color);
 }
 
 .topic {
@@ -119,8 +115,8 @@
     margin-right: 8px;
     color: var(--brand-secondary);
     font-size: 20px;
-   
-   
+
+
 }
 
 .details .right-section img {
@@ -133,7 +129,7 @@
 
 .card-body .title {
     margin-bottom: 0;
-    margin-top: 5px;
+    margin-top: -5px;
 }
 
 .add-to-favorites {
@@ -143,10 +139,11 @@
     border: 0.5px gray;
 }
 
-.add-to-favorites h5 {
+.add-to-favorites > h5:first-child {
     font-weight: 700;
     margin-bottom: 5px;
     margin-top: 10px;
+    color: #000;
 }
 
 .add-to-favorites button {
@@ -170,28 +167,19 @@
 
 .credits {
     margin-left: 25%;
-    margin-top: 5px;
+    margin-block: 10px;
     color: #a8a8be;
     font-size: 12px;
     font-weight: 700;
 }
 
-@media screen and (min-width: 1440px) {
-
-    .details {
-        width: 1440px;
-        box-sizing: border-box;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
 
 @media screen and (max-width: 768px) {
 
     .details {
         flex-direction: column;
         align-items: center;
-        background-image: linear-gradient(to bottom, var(--body-text) 0%, var(--body-text) 68%, transparent 68%, transparent 100%);
+        background-image: linear-gradient(to bottom, #333333 0%, #333333 68%, transparent 68%, transparent 100%);
     }
 
     .details .left-section {
@@ -199,10 +187,12 @@
 
     }
 
-    .about, .sub-topics{
+    .about,
+    .sub-topics {
         width: 90%;
         margin-left: 5%;
     }
+
     .right-section {
         order: -1;
     }

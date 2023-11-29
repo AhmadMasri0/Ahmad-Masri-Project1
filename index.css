@@ -1,7 +1,6 @@
 :root {
-
     --left-right-padding: 5%;
-    --box-shadow: 0 0 6px -1px rgb(182, 181, 181);
+    --box-shadow: 0 0 6px -1px var(--lines-color);
     --radius: 10px;
     --brand-primary: #0768AC;
     --brand-secondary: #03C180;
@@ -15,28 +14,36 @@
 body {
     margin: 0;
     background-color: var(--bg_body);
+}
+
+* {
     font-family: 'Nunito Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 20px var(--left-right-padding) 10px;
+    color: var(--body-text);
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header {
-    display: flex;
-
     justify-content: space-between;
     padding: 10px var(--left-right-padding);
     background-color: var(--bg_default);
-
 }
 
 .header .logo {
     color: var(--brand-primary);
-
 }
 
 .header .header-control {
     width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .header .header-control>button {
@@ -44,15 +51,19 @@ body {
 }
 
 .header .header-control button {
-    background-color: transparent;
+    background-color: var(--bg_default);
     height: 40%;
     border-radius: 5px;
     cursor: pointer;
     border: 0;
     box-shadow: var(--box-shadow);
-    align-items: center;
-    display: flex;
     justify-content: space-between;
+    color: var(--body-text);
+}
+
+.header .header-control button:hover {
+    background-color: var(--brand-secondary);
+    color: white;
 }
 
 .header .header-control button ion-icon {
@@ -60,28 +71,23 @@ body {
 }
 
 .controls {
-
     box-shadow: var(--box-shadow);
-    margin: 20px var(--left-right-padding) 10px;
-
     border-radius: 10px;
     background-color: var(--bg_default);
-    display: flex;
     justify-content: flex-start;
-
 }
-
 
 .sort,
 .filter {
     height: 85%;
     width: 13%;
     padding: 5px;
+    color: var(--body-text);
 }
 
 .sort {
+    border-left: 1px solid rgb(182, 181, 181);
     border-right: 1px solid rgb(182, 181, 181);
-
 }
 
 select {
@@ -91,6 +97,8 @@ select {
     border-radius: var(--radius);
     padding-left: 0;
     font-size: 14px;
+    background-color: var(--bg_default);
+    color: var(--body-text);
 
 }
 
@@ -99,16 +107,13 @@ input:focus {
 }
 
 .search {
-    display: flex;
-    align-items: center;
     width: 74%;
-    border-right: 1px solid rgb(182, 181, 181);
-
 }
 
 .search-outline {
     padding-left: 10px;
     padding-right: 5px;
+    color: var(--body-text);
 }
 
 .search-input {
@@ -116,6 +121,9 @@ input:focus {
     height: 90%;
     width: 100%;
     font-size: 16px;
+    background-color: var(--bg_default);
+    color: var(--body-text);
+    
 }
 
 .input:focus {
@@ -133,9 +141,6 @@ input:focus {
     padding-top: 10px;
     padding-bottom: 5px;
     text-align: center;
-    display: flex;
-    justify-content: center;
-
     background: linear-gradient(to bottom right, var(--brand-primary) 49%, transparent 50%),
         linear-gradient(to bottom left, var(--brand-secondary) 49%, transparent 50%);
     background-size: 100% 50%;
@@ -161,49 +166,56 @@ input:focus {
     font-weight: 400;
 }
 
-.items-number {
-    margin-left: var(--left-right-padding);
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
-.items {
-    margin-left: var(--left-right-padding);
-    margin-right: var(--left-right-padding);
 
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.card {
+    box-shadow: 0 0 3px -1px rgb(182, 181, 181);
+    border-radius: var(--radius);
+}
+
+.card-title {
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-block: 0;
+
+}
+
+.card-img {
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    object-fit: cover;
+    width: 100%;
+    background: white;
 }
 
 .items .card {
     background-color: var(--bg_default);
-
-
-
-    width: 230px;
-    margin-bottom: 25px;
-
-    border-radius: var(--radius);
-    box-shadow: 0 0 3px -1px rgb(182, 181, 181);
 }
+
 
 .card a {
     text-decoration: none;
     color: var(--body-text);
 }
 
-.items .card .card-body {
+.card-body {
     padding-left: 10px;
     padding-right: 10px;
 }
-
 
 .rating {
     display: inline-block;
 }
 
 .rating ion-icon {
-    font-size: 15px;
+    font-size: 14px;
     color: rgb(225, 147, 3);
     float: right;
 }
@@ -215,42 +227,74 @@ input:focus {
 
 
 .items .card .card-body .title {
-    font-weight: 700;
-    margin-top: 0;
     font-size: 15px;
     margin-bottom: 23px;
+
 }
+
 
 .items .card .card-body .author {
 
     color: #686767;
     font-weight: 400;
     font-size: 12px;
-    margin-top: 10px;
+    margin-block: 10px;
 }
 
 .items .card .card-body .type {
     font-weight: 400;
     font-size: 13px;
     margin-bottom: 0;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
 }
 
 .items .card .img img {
-
-    border-top-left-radius: var(--radius);
-    border-top-right-radius: var(--radius);
-    object-fit: cover;
-    width: 100%;
     height: 145px;
 
 }
 
-.footer {
-    margin: var(--left-right-padding);
-    margin-top: 20px;
-    justify-content: center;
-    display: flex;
+.favs {
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    display: none;
+    height: 155px;
+    padding: 10px var(--left-right-padding);
+    background-color: var(--bg_default);
+}
 
+.favs .favs-title {
+    color: var(--body-text);
+    margin-block: 5px;
+}
+
+.favs .fav-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 109px);
+    gap: 10px;
+    height: 110px;
+    overflow-y: auto;
+}
+
+.fav-items .card {
+    height: 100px;
+}
+
+.fav-items .card .card-body .title {
+    font-size: 12px;
+}
+
+.fav-items img {
+    height: 50px;
+}
+
+.footer {
+    margin-block: 20px;
 }
 
 .footer ion-icon {
@@ -259,29 +303,6 @@ input:focus {
     margin-left: 5px;
     margin-right: 7px;
 }
-
-@media screen and (min-width: 1440px) {
-
-    .header,
-    .brand {
-        max-width: 1440px;
-
-        box-sizing: border-box;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .controls,
-    .items,
-    .items-number {
-        box-sizing: border-box;
-        width: 1284px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-
 
 @media screen and (max-width: 573px) {
 
@@ -306,20 +327,14 @@ input:focus {
 
     }
 
-
-
     .brand h3 {
         margin-top: 60px;
     }
-
-
 
     .header .header-control button {
         font-size: smaller;
         --box-shadow: 0 0 1px 0.5px rgb(182, 181, 181);
     }
-
-
 
     .search {
         width: 100%;
@@ -331,14 +346,10 @@ input:focus {
     .sort,
     .filter {
         width: 45%;
-
     }
-
-
 
     .search-input {
         border-top-right-radius: 10px;
-
     }
 
     .footer {
