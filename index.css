@@ -86,8 +86,8 @@ body {
 }
 
 .sort {
-    border-left: 1px solid rgb(182, 181, 181);
-    border-right: 1px solid rgb(182, 181, 181);
+    border-left: 1px solid  var(--lines-color);
+    border-right: 1px solid var(--lines-color);
 }
 
 select {
